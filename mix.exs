@@ -42,7 +42,7 @@ defmodule Ezcryptex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:cryptex, git: "https://github.com/scrogson/cryptex.git", branch: "master"}
+      {:cryptex, "~> 0.0.1"}
     ]
   end
 end
