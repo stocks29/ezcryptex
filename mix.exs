@@ -5,6 +5,8 @@ defmodule Ezcryptex.Mixfile do
     [app: :ezcryptex,
      version: "0.0.1",
      elixir: "~> 1.0",
+     description: description,
+     package: package,
      deps: deps]
   end
 
@@ -13,6 +15,20 @@ defmodule Ezcryptex.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger, :cryptex]]
+  end
+
+  def description do
+    """
+    Thin layer on top of Cryptex for more easily encrypting/decrypting, signing/verifying data in elixir.
+    """ 
+  end
+
+  def package do
+    [
+      contributors: ["Bob Stockdale"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/stocks29/ezcryptex"}
+    ]
   end
 
   # Dependencies can be Hex packages:
