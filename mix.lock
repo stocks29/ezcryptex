@@ -1,0 +1,1 @@
+%{"cryptex": {:git, "https://github.com/scrogson/cryptex.git", "f2194cac1a03356ec409bd40f784a87d79da478c", [branch: "master"]}}
