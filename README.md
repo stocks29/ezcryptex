@@ -1,9 +1,10 @@
 Ezcryptex
 =========
 
-An [Elixir][] library for encrypting/decrypting, signing/verifying data. Really, this is just a super thin layer on top of Cryptex.
+An [Elixir][] library for encrypting/decrypting, signing/verifying data. Really, this is just a super thin layer on top of [Cryptex][].
 
 [Elixir]: http://elixir-lang.org
+[Cryptex]: https://github.com/scrogson/cryptex
 
 ## Usage
 
