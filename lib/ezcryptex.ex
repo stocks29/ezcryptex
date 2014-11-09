@@ -9,6 +9,9 @@ end
 defmodule Ezcryptex do
   defstruct encryptor: nil
 
+  @doc """
+  Create a new Ezcryptex for a given secret_key_base, encrypt_salt and sign_salt 
+  """
   def new(secret_key_base, encrypt_salt, sign_salt) do
     %Ezcryptex{
       encryptor: message_encryptor(
@@ -17,6 +20,9 @@ defmodule Ezcryptex do
     }
   end
 
+  @doc """
+  Encrypt some data. Returns {:error, message} on error
+  """
   def encrypt(ezcryptex, data) do
     try do
       encrypt!(ezcryptex, data)
@@ -25,6 +31,9 @@ defmodule Ezcryptex do
     end
   end
 
+  @doc """
+  Encrypt some data. Raises EncryptionError on error
+  """
   def encrypt!(%Ezcryptex{encryptor: encryptor}, data) do
     try do
       Cryptex.MessageEncryptor.encrypt_and_sign(encryptor, data)
@@ -33,6 +42,9 @@ defmodule Ezcryptex do
     end
   end
 
+  @doc """
+  Decrypt some data. Returns {:error, message} on error
+  """
   def decrypt(ezcryptex, cipher) do
     try do
       decrypt!(ezcryptex, cipher)
@@ -41,6 +53,9 @@ defmodule Ezcryptex do
     end
   end
 
+  @doc """
+  Decrypt some data. Raises a DecryptionError on error
+  """
   def decrypt!(%Ezcryptex{encryptor: encryptor}, cipher) do
     try do
       Cryptex.MessageEncryptor.decrypt_and_verify(encryptor, cipher)
