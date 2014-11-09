@@ -6,6 +6,8 @@ An [Elixir][] library for encrypting/decrypting, signing/verifying data. Really,
 [Elixir]: http://elixir-lang.org
 [Cryptex]: https://github.com/scrogson/cryptex
 
+[![Build Status](https://travis-ci.org/stocks29/ezcryptex.svg?branch=master)](https://travis-ci.org/stocks29/ezcryptex)
+
 ## Usage
 
 ```elixir
